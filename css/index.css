@@ -1,0 +1,860 @@
+/*Travail pratique 2 -- choix libre du thème en mise en page web*/
+/*Les fonts sont choisis sur le site de google fonts*/
+/*Toutes les images, icones et liens sont parvenus de l'internet */
+
+/***Police utilisé pour la barre de navigation***/
+@font-face {
+  font-family: 'mukta';
+  src: url("../polices/Mukta-Medium.ttf");
+}
+
+/***Police utilisé pour le formulaire en soi***/
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../polices/Roboto-Regular.ttf");
+}
+
+/***Police utilisée pour le footer***/
+
+@font-face {
+  font-family: 'raleway';
+  src: url("../polices/Raleway-VariableFont_wght.ttf");
+}
+
+/***Police utilisée pour les figcaptions des vidéos***/
+
+@font-face {
+  font-family: 'martian';
+  src: url("../polices/MartianMono-VariableFont_wdth\,wght.ttf");
+}
+
+/***Police utilisée pour le summary du tableau des derniers champions de tennis***/
+@font-face {
+  font-family: 'oswald';
+  src: url("../polices/Oswald-VariableFont_wght.ttf");
+}
+
+/***Police utilisée pour le tfoot***/
+@font-face {
+  font-family: 'noto';
+  src: url("../polices/NotoSerifNPHmong-VariableFont_wght.ttf");
+}
+
+
+/*TP-Final_Alexander Rankov_1W1*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*** Zone pour faire le "scrolling" de la page plus facile ***/
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*Zone pour mettre du padding à chaque section de mon site*/
+
+#haut, #article, #vidéos, #tableau, #album, #inscription{
+  padding-top: 160px;
+}
+
+/*** Zone du body de la page ***/
+
+#global{
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  overflow-x: hidden ;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/balles.webp");
+}
+
+/*** Zone de main ***/
+
+main{
+  width: 1920px;
+  height: 1080px;
+  margin-top: 170px;
+}
+
+main p{
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+main li{
+  list-style-type: none;
+}
+
+/*** Zone de section ***/
+
+section{
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+  text-align: justify;
+}
+
+/*** Zone des h1 à h3 ***/
+
+h2{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 50px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+h3{
+  font-size: 20px;
+  color: red;
+}
+
+/*** Zone de header ***/
+
+header{
+  margin-top: -300px;
+  position:fixed;
+  background-color: white;
+  width: 100vw;
+  height: 160px;
+}
+
+header nav{
+  display: flex;
+  font-family: 'mukta';
+  width: 700px;
+}
+
+header nav ol li{
+  padding-left: 30px;
+}
+
+/*l'image principal*/
+
+#imgPrincipale{
+  align-self:center;
+  margin-left: 50px
+}
+
+/*** Zone de nav ***/
+
+nav{
+  
+  margin-left: auto;
+  margin-left: 550px;
+  margin-top: -105px;
+  display: inline-block;
+  justify-content: space-between;
+  width: 800px;
+}
+
+nav ol{
+  list-style-type:none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+nav ol li{
+  display: inline-block;
+  padding: 15px 5px ;
+  text-align: center;
+  font-size: 2em;
+  margin-right: 25px;
+}
+
+nav a{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  transition: 0.5s all linear;
+}
+
+nav a:hover{
+  cursor: pointer;
+  color: red;
+  border: 5px solid red;
+  border-radius: 8px;
+  letter-spacing: 2px;
+}
+
+/*****Zone d'accueil*****/
+
+#haut{
+  margin-top: 300px;
+  height: 50px;
+  font-size: 30px;
+}
+
+#haut1{  
+display: flex;
+flex-direction: row;
+justify-content:space-around;  
+background-color: black;
+color: red;
+}
+
+#haut2{ 
+  display: flex;
+flex-direction: row;
+justify-content:space-around;  
+background-color: black;
+color: red;
+}
+
+/*Zone des a*/
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+footer a{
+  color: white;
+}
+
+a:hover, a.actif{
+  color: red;
+  background-color: black;
+  padding: 4px;
+}
+
+a.actif{
+  text-decoration: underline;
+}
+
+/***Zone des articles***/
+
+.article{ 
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  margin-top: 700px;
+  margin-bottom: 50px;
+}
+
+.article p { 
+ font-size: 20px;
+}
+
+.article figure{ 
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.article figcaption{ 
+  text-align: left;
+}
+
+#articleGauche, #articleDroite{ 
+  width: 600px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+/*Article gauche*/
+
+#articleGauche{ 
+  margin-left: 350px;
+  border-right: 2px dotted black;
+}
+
+#articleGauche>article>figure>img{ 
+  margin-left: 150px;
+}
+
+#articleGauche p {
+  font-size: 20px;
+}
+
+#articleGauche figcaption {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+/*Article droite*/
+
+#articleDroite>article>figure>img{ 
+  margin-left: 150px;
+}
+
+#articleDroite p {
+  font-size: 20px;
+}
+
+#articleDroite figcaption {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+/* Zone des images dans les articles*/
+
+#raquette {
+  transition: 0.5s all linear;
+  background-image: url("../images/photoShapo1.jpg");
+  background-repeat: no-repeat;
+}
+
+#raquette:hover{
+  width: 400px;
+  height: 400px;
+  transform-origin: 50% 50%;
+}
+
+/***Zone pour les vidéos***/
+
+#vidéos{
+  margin-top: 100px;
+  width:1920px;
+  height: 1080px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#vidéos>div{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#vidéos>div>figure{
+  margin-top: 30px;
+}
+
+#vidéos figure{
+  border: 5px solid red;
+  flex: 0 0 40%;
+  border-radius: 5px;
+}
+
+#vidéos iframe{
+  width: 100%;
+}  
+
+#vidéos figcaption{
+  text-align: center;
+  background-color: black;
+  color:white;
+  font-size: 20px;
+  margin-top: -4px;
+  font-family: 'martian';
+}
+
+iframe{
+  width: 560px;
+  height: 315px;
+}
+
+/***Zone pour le tableau***/
+
+#tableau{
+  margin-top: 100px;
+  height: 1080px;
+  width: 1920px;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+}	
+
+table{
+  border : 1px solid  #333;
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 15px;
+  font-weight: bold;
+}	
+
+#tableau a:hover{
+    color: aqua;
+    padding: 4px;
+}
+/*Le texte qui est le caption du tableau*/
+
+caption{
+  height: 50px;
+  background-color: black;
+  font-size: 20px;
+}
+
+/*L'information supplémentaire pour le caption*/
+
+details{
+  color: white;
+  font-family: 'oswald';
+}
+
+/*Balise de thead,tbody et tfoot*/
+thead{
+  background-color: white;
+}
+
+tbody{
+  background-color: white;
+  font-family: 'oswald';
+}
+
+tfoot{
+  background-color: red;
+  font-size: 20px;
+  font-family: 'noto';
+}
+
+
+/*Les carrés en soi*/
+
+th, td{
+  border : 1px solid  #333;
+  text-align: center;
+}
+
+/*CSS avancés*/
+
+th[scope="col"]{
+  background-color: rgb(88, 117, 255);
+}
+
+th[scope="row"]{
+  background: rgb(119,168,87);
+  background: linear-gradient(164deg, rgba(119,168,87,1) 0%, rgba(119,168,87,1) 99%); 
+}
+
+/***** Zone pour la galerie d'images  *****/
+
+/*Zone pour faire tous les carrés avec un border*/
+#casper, #felix, #carlos, #stefanos, #holger, #jannik, #frances, #Denis{
+  border: 1px solid black;
+  width: 450px;
+  height: 450px;
+}
+
+/*Zone pour la séparation des photos*/
+
+#top, #photos2, #photos3,#photosBas{
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+#top{
+  margin-top: 30px;
+}
+
+/*Détails de chaque carré*/
+
+#carlos,#felix,#holger,#frances,#casper,#stefanos,#jannik,#Denis{
+  width: 450px;
+  height: 450px;
+}
+
+/*Zone des différents joueurs de tennis*/
+
+/*Zone de Carlos Alcaraz*/
+#carlos{
+  transition: 0.5s all linear;
+  background-image: url("../images/photoAlcarazUs.jpeg");
+  background-repeat: no-repeat;
+}
+
+#carlos:hover{
+  width: 1000px;
+  background-color: black;
+}   
+
+#carlos>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right;
+  transition: 0.5s all linear;
+}
+
+#carlos>ul>li{
+margin-top: 15px;
+}
+
+#carlos:hover>ul{
+  opacity: 1;
+}
+
+/*Zone de Casper Ruud*/
+
+#casper {
+  transition: 0.5s all linear;
+  background-image: url("../images/photoRuudNormal.jpg");
+  background-repeat: no-repeat;
+}
+
+#casper:hover{
+  width: 900px;
+  background-color: black;
+}
+
+#casper>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right; 
+  transition: 0.5s all linear;
+}
+
+#casper>ul>li{
+  margin-top: 15px;
+}
+
+#casper:hover>ul{
+  opacity: 1;
+}
+
+/*Zone de Félix Auger-Aliassime*/
+
+#felix {
+  transition: 0.5s all linear;
+  background-image: url("../images/photoFAA1.jpg");
+  background-repeat: no-repeat;
+}
+
+#felix:hover{
+  width: 1000px;
+  background-color: black;
+}
+
+
+#felix>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right;
+  transition: 0.5s all linear;
+}
+
+#felix:hover>ul{
+  opacity: 1;
+} 
+
+#felix>li{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#felix>ul>li{
+  margin-top: 15px;
+}
+
+/*Zone de Jannik Sinner*/
+
+#jannik {
+  transition: 0.5s all linear;
+  background-image: url("../images/photoSinner1.jpg");
+  background-repeat: no-repeat;
+}
+
+#jannik:hover{
+ width: 900px;
+ background-color: black;
+}
+
+#jannik>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right;
+  transition: 0.5s all linear;
+}
+
+#jannik>ul>li{
+  margin-top: 15px;
+}
+
+#jannik:hover>ul{
+  opacity: 1;
+}
+
+/*Zone de Holger Rune*/
+
+#holger{
+  transition: 0.5s all linear;
+  background-image: url("../images/photoRune1.jpg");
+  background-repeat: no-repeat;
+}
+
+#holger:hover{
+  width: 1000px;
+  background-color: black;
+}
+
+#holger>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right;
+  transition: 0.5s all linear;
+}
+
+#holger:hover>ul{
+  opacity: 1;
+}
+
+#holger>ul>li{
+  margin-top: 15px;
+}
+
+/*Zone de Stefanos Tsitsipas*/
+
+#stefanos {
+  background-image: url("../images/photoTsitsi1.jpg");
+  background-repeat: no-repeat;
+  transition: 0.5s all linear;
+}
+
+#stefanos:hover{
+  width: 900px;
+  background-color: black;
+}
+
+#stefanos>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right;
+  transition: 0.5s all linear;
+}
+
+#stefanos>ul>li{
+  margin-top: 15px;
+}
+
+#stefanos:hover>ul{
+  opacity: 1;
+}
+
+/*Zone de Frances Tiafoe*/
+
+#frances {
+  background-image: url("../images/photoFoeJoie.jpg");
+  background-repeat: no-repeat;
+  transition: 0.5s all linear;
+}
+
+#frances:hover{
+  width: 1000px;
+  background-color: black;
+}
+
+#frances>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right;
+  transition: 0.5s all linear;
+}
+
+#frances:hover>ul{
+  opacity: 1;
+}
+
+#frances>ul>li{
+  margin-top: 15px;
+}
+
+/*Zone de Denis Shapovalov*/
+
+#Denis {
+  transition: 0.5s all linear;
+  background-image: url("../images/photoShapo1.jpg");
+  background-repeat: no-repeat;
+}
+
+#Denis:hover{
+  width: 900px;
+  background-color: black;
+}
+
+
+#Denis>ul{
+  /*display: none;*/
+  opacity: 0;
+  color: white;
+  float: right;
+  transition: 0.5s all linear;
+}
+
+#Denis>ul>li{
+  margin-top: 15px;
+}
+
+#Denis:hover>ul{
+  opacity: 1;
+}
+
+/**** Zone du formulaire ******/
+
+#inscription{
+  height: 1200px;
+  margin-top: 1400px;
+}
+
+form{
+  font-family: 'roboto';
+  width: 900px;
+  margin: 0 auto;
+  min-width: 400px;
+  max-width: 800px; 
+}
+
+/*Zone de label du formulaire*/
+label{
+  margin-top: 10px;
+}
+
+/*Zone du fieldset*/
+
+fieldset{
+  background-color: white;
+  margin-top: 50px;
+}
+
+.colonne {
+  padding: 5%;
+  flex: 1 0 40%;
+}
+
+/*Les label des fieldset*/
+
+label>input:checked ~ span {
+  background-position: -14px 0px;
+} 
+
+/**Les titres des fieldset**/
+
+legend{
+  text-align: center;
+  font-size: 25px;
+}
+
+/*CSS avancés du formulaire*/
+
+.colonne:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 5%;
+}
+
+.colonne:nth-of-type(1)>label>input{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.colonne:nth-of-type(1)>fieldset>label>input{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.colonne:nth-of-type(1)>fieldset{
+  display: flex;
+  flex-direction: column;
+}
+
+.colonne:nth-of-type(3)>label>input{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.colonne:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.colonne:nth-of-type(3){
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.colonne:nth-of-type(1)>fieldset{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Zone pour la confirmation du formulaire*/
+
+#boutons {
+  display: flex;
+  align-items: center;
+  flex: 1 0 40%;
+  padding: 4%;
+}
+
+#boutons input{
+  margin-left: 10px;
+}
+
+
+/*******Zone de footer********/
+
+
+footer{
+  font-family: 'raleway';
+  background-color: black;
+  color: white;
+  margin-top: 500px;
+}
+
+footer>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+footer ul{
+  margin-top: 10px;
+}
+
+footer ul li{
+  margin-top: 10px;
+}
+
+footer li{
+  list-style-type: none;
+  text-decoration: underline;
+}
+
+#departement{
+  width: 200px;
+  font-size: clamp(1rem, 10vw, 1rem);
+}
+
+/*Zone pour positionner bien les images en dessous du texte*/
+
+#icones{
+  width: 200px;
+}
+
+#icones img{
+  margin-top: 10px;
+}
